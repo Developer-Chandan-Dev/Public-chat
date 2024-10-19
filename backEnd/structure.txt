@@ -1,0 +1,12 @@
+Text Utils
+This is an application using that we can add our notes and after adding the notes we can delete and edit these notes.
+
+
+Features
+1. Add notes
+2. Delete notes
+3. Update notes
+
+Routes
+Home page = http://localhost:3000
+
