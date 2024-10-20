@@ -15,6 +15,7 @@ function Login() {
 
     await login(username.trim(), password.trim());
   };
+  document.title = "Chatter Vibe - Login"
   return (
     <div className="flex flex-col items-center justify-center  min-w-72 sm:min-w-96 mx-auto ">
       <div className="w-full p-4 sm:px-6 sm:py-8 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">

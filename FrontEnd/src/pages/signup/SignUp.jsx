@@ -23,6 +23,8 @@ function SignUp() {
     await signup(inputs);
   };
 
+  document.title = "Chatter Vibe - Signup";
+
   return (
     <div className="flex flex-col items-center justify-center min-w-72 sm:min-w-96 mx-auto">
       <div className="w-full p-4 sm:p-6 founded-lg shodow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
