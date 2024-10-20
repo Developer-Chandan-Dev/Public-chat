@@ -4,6 +4,7 @@ import { TiMessages } from "react-icons/ti";
 import useConversation from "../../zustand/useConversation";
 import { useEffect } from "react";
 import { useAuthContext } from "../../context/AuthContext";
+import logo from '../../assets/images/logo.png'
 
 const MessageContainer = () => {
   const {
@@ -84,6 +85,9 @@ const NoChatSelected = () => {
         </svg>
       </div>
       <div className="px4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2">
+        <div className="mb-3">
+          <img src={logo} width={100} alt="logo" />
+        </div>
         <p>Welcome 👋 {authUser.fullName}</p>
         <p>Select a chat to start messaging</p>
         <TiMessages className="text-3xl md:text-6xl text-center" />
