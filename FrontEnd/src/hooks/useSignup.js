@@ -3,6 +3,8 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 
 const useSignup = () => {
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
+  console.log(VITE_API_URL);
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext();
 
@@ -24,7 +26,7 @@ const useSignup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/signup", {
+      const res = await fetch(`${VITE_API_URL}/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

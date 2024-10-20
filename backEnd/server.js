@@ -3,10 +3,11 @@ import path from "path";
 import dotenv from "dotenv"; // Install this package (npm install dotenv --save--dev)
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000/", "http://localhost:8000"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
