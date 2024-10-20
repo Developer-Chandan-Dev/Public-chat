@@ -5,13 +5,6 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000/", "http://localhost:3000", "https://chattervibe.netlify.app"],
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    credentials: true,
-  })
-);
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
@@ -22,6 +15,8 @@ import { app, server } from "./socket/socket.js";
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
+
+
 
 // const __dirname = path.resolve();
 
