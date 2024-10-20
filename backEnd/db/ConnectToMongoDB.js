@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv"; // Install this package (npm install dotenv --save--dev)
 
 dotenv.config();
-const mongoDB_URL = process.env.MONGO_DB_URI;
+// const mongoDB_URL = process.env.MONGO_DB_URI;
+const mongoDB_URL = process.env.MONGO_DB_ATLAS_URI;
 // const mongoDB_URL = Enter Your mongodb atlas url;
 
 mongoose.connect(mongoDB_URL, {
