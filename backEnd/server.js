@@ -20,7 +20,7 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3000/", "https://chattervibe.netlify.app"],
+  origin: ["http://localhost:3000", "http://localhost:3000/", "https://chattervibe.netlify.app","https://public-chat-ucdd.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
