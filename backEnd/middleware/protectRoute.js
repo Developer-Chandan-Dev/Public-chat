@@ -5,7 +5,7 @@ import User from "../Models/User.model.js";
 // Middleware
 const protectRoute = async (req, res, next) => {
   try {
-    const token = req.cookies.jwt;
+    const token = req.cookies.chatapp_jwt;
     // cookie/token === null || not found
     if (!token) {
       return res
