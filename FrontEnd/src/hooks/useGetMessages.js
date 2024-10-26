@@ -12,7 +12,13 @@ const useGetMessages = () => {
     const getMessages = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${VITE_API_URL}/api/message/${selectedConversation._id}`);
+        const res = await fetch(
+          `${VITE_API_URL}/api/message/${selectedConversation._id}`,
+          {
+            method: "GET",
+            credentials: "include", // Ensure cookies are sent with the request
+          }
+        );
         const data = await res.json();
         if (data.error) throw new Error(data.error);
         setMessages(data);
@@ -25,7 +31,7 @@ const useGetMessages = () => {
     if (selectedConversation?._id) getMessages();
   }, [selectedConversation?._id, setMessages]);
 
-  return {messages, loading}
+  return { messages, loading };
 };
 
 export default useGetMessages;

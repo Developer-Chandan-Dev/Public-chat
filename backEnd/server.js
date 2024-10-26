@@ -13,15 +13,21 @@ import userRoutes from "./routes/user.routes.js";
 import db from "./db/ConnectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
+app.use(bodyParser.json()); // To parse incoming request in JSON payloads (from req.body)
+app.use(cookieParser());
+
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
-
+app.use(cors({
+  origin: ["http://localhost:3000", "http://localhost:3000/", "https://chattervibe.netlify.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 
 // const __dirname = path.resolve();
 
-app.use(bodyParser.json()); // To parse incoming request in JSON payloads (from req.body)
-app.use(cookieParser());
+
 
 // Routes
 app.get("/", async (req, res) => {

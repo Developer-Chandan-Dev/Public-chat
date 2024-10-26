@@ -13,6 +13,7 @@ const useSendMessage = () => {
     try {
       const res = await fetch(`${VITE_API_URL}/api/message/send/${selectedConversation._id}`, {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

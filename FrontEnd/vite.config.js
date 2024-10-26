@@ -8,8 +8,8 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        // target: "http://localhost:8000", // Local backend url
-        target: "https://public-chat-ucdd.onrender.com", // Render backend URL
+        target: "http://localhost:8000", // Local backend url
+        // target: "https://public-chat-ucdd.onrender.com", // Render backend URL
         changeOrigin: true,
         secure: true,
       },

@@ -8,10 +8,11 @@ const Conversation = ({ conversation, lastIdx }) => {
     setSelectedConversation,
     setActiveConversation,
   } = useConversation();
+  const isSelected = selectedConversation?._id === conversation._id;
   const { onlineUsers } = useSocketContext();
   const isOnline = onlineUsers.includes(conversation._id);
 
-  const isSelected = selectedConversation?._id === conversation._id;
+  // console.log(isOnline, onlineUsers);
 
   const handleSetConversation = () => {
     setSelectedConversation(conversation);

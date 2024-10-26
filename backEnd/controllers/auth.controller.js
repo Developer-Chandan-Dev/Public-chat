@@ -53,6 +53,7 @@ export const signup = async (req, res) => {
         profilePic: newUser.profilePic,
       });
     } else {
+      return res.status(400).json({error:"Something went wrong"})
     }
   } catch (error) {
     console.log("Error in signup controller", error);
